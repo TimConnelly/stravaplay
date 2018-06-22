@@ -45,14 +45,20 @@ class MyHandler(BaseHTTPRequestHandler):
         )
 
         activities = client.get_activities()
-        date, distance, elevation = zip(*[
-            (a.start_date, a.distance.num, a.total_elevation_gain.num)
+        date, distance, elevation, atype, start_latlng, duration = zip(*[
+            (a.start_date, a.distance.num, a.total_elevation_gain.num, a.type,
+             a.start_latlng, a.elapsed_time)
             for a in activities
-            if a.type == 'Run'
+#            if a.type == 'Run'
         ])
 
         df = pd.DataFrame(dict(
-            date = date, distance = distance, elevation = elevation
+            date = date, 
+            distance = distance, 
+            elevation = elevation, 
+            atype=atype,
+            start_latlng=start_latlng,
+            duration=duration
         ))
         df.to_pickle('data.pkl')
 

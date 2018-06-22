@@ -1,6 +1,10 @@
 # stravaplay
 
-Caveat: Sloppy and just "done" enough for the results I wanted. 
+Originally cloned from Ben Thompsons code.
+https://github.com/tbenthompson/stravaplay
+
+His caveat still applies.
+Caveat: Sloppy and just "done" enough for the results I wanted.
 
 Instructions:
 
@@ -11,3 +15,5 @@ Instructions:
 5) Run "process.py" to make a nice figure of MEQ, distance and elevation
 
 This uses the https://github.com/hozn/stravalib library which needs to installed with "pip install stravalib". Also, pandas and other common libraries!
+
+In addition you will also need Bokeh Python and the popular Pandas libraries.
