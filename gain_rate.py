@@ -142,7 +142,8 @@ from bokeh.plotting import figure, show, output_file, ColumnDataSource
 from bokeh.models import HoverTool
 
 hover=HoverTool(tooltips=[
-            ("Activity", "@atype"),
+            ("Feet/mile", "@ft_per_mile"),
+            ("Feet/hour", "@ft_per_hour"),
             ("Date", "@Date{%m-%d-%Y}"),
             ("MEQ", "@meq"),
             ("Distance", "@miles"),
